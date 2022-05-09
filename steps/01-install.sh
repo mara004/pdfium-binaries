@@ -20,6 +20,7 @@ echo "$DepotTools_DIR" >> "$PATH_FILE"
 
 case "$TARGET_OS-$TARGET_LIBC-$TARGET_CPU" in
   android-*)
+    sudo dpkg --add-architecture i386
     sudo apt-get update
     sudo apt-get install -y aptitude
     sudo aptitude install -y libncurses5:i386 libstdc++6:i386 zlib1g:i386
