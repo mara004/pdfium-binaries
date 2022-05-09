@@ -23,6 +23,7 @@ case "$TARGET_OS-$TARGET_LIBC-$TARGET_CPU" in
     sudo apt-get update
     sudo apt-get install -y aptitude
     sudo aptitude install -y libglib2.0-dev
+    sudo aptitude install -y libglib2.0-0:i386
     ;;
 
   win-*)
