@@ -17,6 +17,7 @@ case "$OS" in
     sudo apt-get remove -y --purge php7.4-common
     sudo dpkg --configure -a
     sudo apt --fix-broken install
+    sudo apt install -y --allow-downgrades libpcre2-8-0=10.34-7
     sudo aptitude install -y libglib2.0-0:i386
     build/install-build-deps-android.sh
     gclient runhooks

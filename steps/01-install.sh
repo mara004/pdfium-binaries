@@ -23,6 +23,7 @@ case "$TARGET_OS-$TARGET_LIBC-$TARGET_CPU" in
     sudo dpkg --add-architecture i386
     sudo apt-get update
     sudo apt-get install -y aptitude
+    sudo apt install -y --allow-downgrades libpcre2-8-0=10.34-7
     sudo aptitude install -y libncurses5:i386 libstdc++6:i386 zlib1g:i386
     ;;
 
