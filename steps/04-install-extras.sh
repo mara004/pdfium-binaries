@@ -14,6 +14,8 @@ case "$OS" in
   android)
     sudo apt-get update
     sudo apt-get remove -y --purge php7.4-common
+    sudo dpkg --configure -a
+    sudo apt --fix-broken install
     sudo apt-get install -y  libmount1:i386 libselinux1:i386
     build/install-build-deps-android.sh
     gclient runhooks
