@@ -15,6 +15,7 @@ case "$OS" in
     sudo apt-get update
     sudo apt-get remove -y php7.4-common
     sudo apt-get full-upgrade
+    sudo dpkg --configure -a
     build/install-build-deps-android.sh
     gclient runhooks
     ;;
