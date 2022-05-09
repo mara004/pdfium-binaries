@@ -22,8 +22,7 @@ case "$TARGET_OS-$TARGET_LIBC-$TARGET_CPU" in
   android-*)
     sudo apt-get update
     sudo apt-get install -y aptitude
-    sudo aptitude install -y libglib2.0-dev
-    sudo aptitude install -y libglib2.0-0:i386
+    sudo aptitude install -y libncurses5:i386 libstdc++6:i386 zlib1g:i386
     ;;
 
   win-*)
