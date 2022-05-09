@@ -13,8 +13,8 @@ case "$OS" in
 
   android)
     sudo apt-get update
-    sudo apt-get remove -y php7.4-common
-    sudo dpkg --force depends -P libglib2.0-0:i386
+    sudo apt-get remove -y --purge php7.4-common
+    sudo apt-get install -y  libmount1:i386 libselinux1:i386
     build/install-build-deps-android.sh
     gclient runhooks
     ;;
