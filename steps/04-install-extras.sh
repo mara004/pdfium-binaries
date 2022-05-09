@@ -17,7 +17,7 @@ case "$OS" in
     sudo apt-get remove -y --purge php7.4-common
     sudo dpkg --configure -a
     sudo apt --fix-broken install
-    sudo apt-get install -y  libmount1:i386 libselinux1:i386 libpcre2-8-0:i386
+    sudo aptitude install -y libglib2.0-dev
     build/install-build-deps-android.sh
     gclient runhooks
     ;;

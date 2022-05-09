@@ -19,6 +19,12 @@ fi
 echo "$DepotTools_DIR" >> "$PATH_FILE"
 
 case "$TARGET_OS-$TARGET_LIBC-$TARGET_CPU" in
+  android-*)
+    sudo apt-get update
+    sudo apt-get install -y aptitude
+    sudo aptitude install -y libglib2.0-dev
+    ;;
+
   win-*)
     echo "$WindowsSDK_DIR/$CURRENT_CPU" >> "$PATH_FILE"
     ;;
