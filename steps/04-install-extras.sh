@@ -12,6 +12,7 @@ case "$OS" in
     ;;
 
   android)
+    sudo dpkg --add-architecture i386
     sudo apt-get update
     sudo apt-get remove -y --purge php7.4-common
     sudo dpkg --configure -a
